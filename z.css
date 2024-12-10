@@ -1,0 +1,200 @@
+.conTitle{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    height: fit-content;
+}
+
+svg{
+    filter: drop-shadow(white -0.8rem 0.8rem 0.8rem);
+    max-width: 90%;
+}
+
+svg path{
+    fill: transparent;
+    stroke: black;
+    stroke-width: 1;
+    stroke-dasharray: 420;
+    stroke-dashoffset: 420;
+    animation: textTitle 4s ease-in-out forwards;
+}
+@keyframes textTitle {
+    0%{
+        stroke-dashoffset: 420;
+    }
+    80%{
+        fill: transparent;
+    }
+    100%{
+        fill: white;
+        stroke-dashoffset: 0;
+    }
+}
+
+.title button{
+    animation: buttontitle 4s ease-in-out forwards;
+}
+
+@keyframes buttontitle {
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.title button {
+    position: relative;
+    padding: 0.5rem;
+    font-weight: bolder;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    background: #b49FDC; /* Purple */
+    color: black; /* White text */
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Indicate it's clickable */
+    
+}
+
+
+
+.title button:hover {
+    background: #6a0dad; /* Darker purple on hover */
+    
+}
+
+
+.title button:hover span {
+    color: white; /* Keep the text color visible on hover */
+}
+
+
+
+
+
+
+
+
+.bgGradient{
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0), rgba(10, 10, 10, 0.8),  rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 1));
+}
+
+
+iframe{
+    min-width: 35rem;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    height: fit-content;
+}
+
+.conytvid{
+    width: 70rem;
+    max-width: 90%;
+    background: linear-gradient(to right, #fbcfe8, #d8b4fe, #a5b4fc);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.conytvid:hover {
+    transform: scale(1.05);
+}
+.conytvid h3{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.topwrap{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+@media (max-width: 1130px){
+    .topwrap{
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+    iframe{
+        width: 100%;
+        min-width: 0rem;
+    }
+}
+
+.side{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.side ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    counter-reset: list-counter;
+}
+
+.side ul li {
+    text-align: left;
+    counter-increment: list-counter;
+}
+
+.side ul li::before {
+    content: counter(list-counter) ". ";
+    font-weight: bolder;
+}
+
+.conytvid p{
+    text-align: justify;
+}
+
+.constories{
+    display: flex;
+    justify-content: center;
+}
+.stories{
+    width: 70rem;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+@media (max-width:750px){
+    .stories{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* div, nav{
+    border: red solid 1px;
+} */
